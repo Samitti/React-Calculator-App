@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export default function Display(props) {
+const Display = (props) => {
   const { result } = props;
   return (
     <div>
@@ -16,3 +16,5 @@ Display.propTypes = {
 Display.defaultProps = {
   result: '0',
 };
+
+export default Display;
