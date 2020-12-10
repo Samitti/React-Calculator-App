@@ -6,15 +6,15 @@ const operate = (numberOne, numberTwo, operation) => {
   let result = 0;
 
   if (operation === '+') {
-    result = firstNum.plus(secondNum);
+    result = firstNum.plus(secondNum).toString();
   } else if (operation === '-') {
-    result = firstNum.minus(secondNum);
+    result = firstNum.minus(secondNum).toString();
   } else if (operation === 'X') {
-    result = firstNum.times(secondNum);
+    result = firstNum.times(secondNum).toString();
   } else if (operation === '÷') {
-    result = firstNum.div(secondNum);
+    result = firstNum.div(secondNum).toString();
   } else if (operation === '%') {
-    result = firstNum.mod(secondNum);
+    result = firstNum.mod(secondNum).toString();
   }
   return result;
 };

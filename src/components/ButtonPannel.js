@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
-const ButtonPanel = () => {
+const ButtonPanel = ({ clickHandler }) => {
   const buttonNames = [
     ['AC', '+/-', '%', '÷'],
-    ['7', '8', '9', 'x'],
+    ['7', '8', '9', 'X'],
     ['4', '5', '6', '-'],
     ['1', '2', '3', '+'],
     ['0', '.', '='],
@@ -22,6 +23,7 @@ const ButtonPanel = () => {
                 <Button
                   name={buttonName}
                   key={createID(buttonName)}
+                  clickHandler={clickHandler}
                 />
               ))
             }
@@ -30,6 +32,10 @@ const ButtonPanel = () => {
       }
     </div>
   );
+};
+
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
 };
 
 export default ButtonPanel;
