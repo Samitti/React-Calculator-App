@@ -12,6 +12,7 @@ const ButtonPanel = ({ clickHandler }) => {
   ];
 
   const createID = prefix => `${prefix}-${new Date().getTime()}`;
+  const yellewBtn = ['÷', 'X', '-', '+', '='];
 
   return (
     <div className="button-panel">
@@ -24,6 +25,8 @@ const ButtonPanel = ({ clickHandler }) => {
                   name={buttonName}
                   key={createID(buttonName)}
                   clickHandler={clickHandler}
+                  color={yellewBtn.includes(buttonName) ? 'orange' : 'gray'}
+                  width={buttonName === '0' ? 'wide' : 'normal'}
                 />
               ))
             }
